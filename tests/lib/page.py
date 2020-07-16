@@ -2,7 +2,7 @@ import collections
 import time
 import typing
 
-from libs.canvas import CanvasDom
+from .canvas.dom import CanvasDom
 
 if typing.TYPE_CHECKING:
     from selenium.webdriver.remote.webdriver import WebDriver  # noqa: F401

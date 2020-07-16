@@ -1,5 +1,6 @@
 import pytest
-from libs.page import CanvasCalculatorPage
+
+from .lib.page import CanvasCalculatorPage
 
 
 @pytest.fixture(scope="class")
@@ -27,7 +28,7 @@ class TestCalculator:
         calc.insert_number(number)
         assert calc.display_value == number
 
-    def test_one_plus_two(self, calc: "CanvasCalculatorPage"):
+    def test_1_plus_2(self, calc: "CanvasCalculatorPage"):
         calc.clear()
 
         calc.click_on_button("1")
@@ -38,8 +39,8 @@ class TestCalculator:
         calc.click_on_button("equal")
         assert calc.display_value == "3"
 
-    def test_twenty_one_plus_fifteen_plus_six(self,
-                                              calc: "CanvasCalculatorPage"):
+    def test_21_plus_15_plus_6(self,
+                               calc: "CanvasCalculatorPage"):
         calc.clear()
 
         calc.insert_number("21")
